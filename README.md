@@ -1,2 +1,3 @@
 # my-demo
-This is my First Repositary
+This is my First Git Repositary
+Author - Devendra Chauhan
