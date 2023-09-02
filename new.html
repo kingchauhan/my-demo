@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern button</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #wrapper{
+            height: 100vh;
+            width: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-pink{
+            position: relative;
+            background-color: #ff4800;
+            padding: 0.8rem 2.3rem;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0px 0px 15px 7px rgb(5, 5, 86); 
+            border: none;
+            z-index: 1;
+            text-shadow: 1px 1px  1px rgb(5, 5, 86), -1px -1px  1px rgb(5, 5, 86), -1px 1px  1px rgb(5, 5, 86),1px -1px  1px rgb(5, 5, 86);
+        }
+        .btn-pink::before{
+            content: '';
+            background-color: rgb(5, 5, 86);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scaleX(0);  
+            transform-origin: left;
+            transition: all 0.5s;
+            z-index: -1;
+        }
+        .btn-pink:hover{
+            transform: scaleX(1);
+            
+            text-shadow: 2px 2px  5px #ff4800, -2px -2px  5px #ff4800,2px -2px  5px #ff4800,-2px 2px  5px #ff4800;
+            box-shadow: 0px 0px 15px 7px #ff4800; 
+        }
+        .btn-pink:hover::before{
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <button class="btn-pink">Hire me</button>
+    </div>
+</body>
+</html>
